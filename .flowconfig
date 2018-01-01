@@ -1,0 +1,21 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/babel-plugin-transform-react-remove-prop-types/.*
+<PROJECT_ROOT>/node_modules/config-chain/.*
+.*/__tests__/.*
+.*/tests?/.*
+
+[lints]
+all=warn
+sketchy-null=error
+
+[include]
+
+[libs]
+./config/flow-typed
+
+[options]
+include_warnings=true
+module.ignore_non_literal_requires=true
+module.name_mapper='^../.articles/.[a-zA-Z]+.json$' -> '<PROJECT_ROOT>/config/stub/GeneralArrayStub.js'
+suppress_comment= \\(.\\|\n\\)*\\$FlowAllowNextLineInThisTest\\:\\s?.+
+suppress_comment= \\(.\\|\n\\)*\\$FlowAllowNextLineWithExplanation\\:\\s?.+
